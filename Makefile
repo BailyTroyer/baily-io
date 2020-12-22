@@ -44,11 +44,7 @@ clean:
 
 .PHONY: build-static-assets
 build-static-assets:
-	 docker run \
-		-v $(shell pwd)/build:/node/build \
-		-v $(shell pwd)/src:/node/src \
-		-v $(shell pwd)/public:/node/public \
-		$(DOCKER_IMAGE):$(VERSION) yarn build
+	docker-compose run --rm $(DOCKER_IMAGE) yarn build
 
 .PHONY: push-static-assets
 push-static-assets:
