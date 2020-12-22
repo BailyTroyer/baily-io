@@ -1,6 +1,6 @@
 # Baily.io - My Personal Space
 
-A simple NextJS app for displaying all things me 💁‍♀️
+A simple Gatsby app for displaying all things me 💁‍♀️
 
 ![Deploy baily.io](https://github.com/BailyTroyer/baily-io/workflows/Deploy%20baily.io/badge.svg?branch=main)
 
