@@ -19,7 +19,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.19",
     "@types/react-helmet": "^6.1.0",
+    "@types/react-test-renderer": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "babel-jest": "^26.6.3",
