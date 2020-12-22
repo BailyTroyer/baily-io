@@ -1,0 +1,25 @@
+name: Deploy baily.io
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  deploy_web:
+    runs-on: ubuntu-latest
+    name: Build & Push Web Static Assets to S3
+    steps:
+    - uses: actions/checkout@v1
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+    - name: Build Image
+      run: make build
+    - name: Build Static Assets
+      run: make build-static-assets
+    - name: Push Static Assets
+      run: make push-static-assets

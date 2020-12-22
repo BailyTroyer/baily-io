@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  baily-io:
+    image: baily-io:latest
+    command: yarn develop
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/node_modules/
