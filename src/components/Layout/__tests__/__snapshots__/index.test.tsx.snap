@@ -21,7 +21,7 @@ exports[`renders correctly 1`] = `
       </h1>
       <svg
         aria-hidden="true"
-        className="svg-inline--fa fa-hamburger fa-w-16 fa-lg lg:hidden xl:hidden md:hidden"
+        className="svg-inline--fa fa-hamburger fa-w-16 fa-lg md:hidden"
         data-icon="hamburger"
         data-prefix="fas"
         focusable="false"
