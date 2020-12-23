@@ -27,7 +27,7 @@ const Header: FC<Props> = (props: Props) => {
         <FontAwesomeIcon
           icon={faHamburger}
           size="lg"
-          className="lg:hidden xl:hidden md:hidden"
+          className="md:hidden"
           onClick={() => setNavVisible(!navVisible)}
         />
         <div
