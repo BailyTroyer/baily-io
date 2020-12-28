@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="mx-auto my-3 flex flex-col max-w-3xl cursor-pointer select-none overflow-hidden"
+  onClick={[Function]}
+>
+  <div
+    className="bg-purple-400 rounded-t-md px-6 py-3"
+  >
+    <h1
+      className="font-medium text-white lg:text-2xl text-xl"
+    >
+      QUETION
+    </h1>
+  </div>
+  <div
+    className="flex-col bg-purple-100 px-5 py-2 hidden"
+  >
+    <p>
+      ANSWER
+    </p>
+  </div>
+</div>
+`;

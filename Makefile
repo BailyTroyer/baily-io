@@ -36,7 +36,7 @@ lock-dependencies:
 
 .PHONY: clean
 clean:
-	rm -rf public/*
+	rm -rf public .cache node_modules test_output
 
 # ============================================================================
 # CI/CD Commands
