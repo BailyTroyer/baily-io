@@ -7,6 +7,20 @@ import Img from "gatsby-image"
 
 import { SEO, Layout, FAQ, ArticleLink } from "../components"
 
+interface QueryData {
+  node: {
+    id: number
+    frontmatter: {
+      title: string
+      date: string
+    }
+    fields: {
+      slug: string
+    }
+    excerpt: string
+  }
+}
+
 const IndexPage: FC = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -14,6 +28,22 @@ const IndexPage: FC = () => {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        totalCount
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              date(formatString: "DD MMMM, YYYY")
+            }
+            fields {
+              slug
+            }
+            excerpt
           }
         }
       }
@@ -74,41 +104,35 @@ const IndexPage: FC = () => {
       </div>
 
       {/* Blog */}
-      <div className="max-w-screen-lg mx-auto sm:max-w-2xl my-12 px-6">
-        <div className="flex flex-col mb-2 border-b border-gray-200 border-solid">
-          <h1 className="font-bold text-3xl mb-2">Recent Articles</h1>
-          <p className="mb-4">
-            I find it very theraputic to write things down. From helpful posts
-            getting personal tech, to random thoughts that pop in my head before
-            bed.
-          </p>
-        </div>
-        <Link to="/">
-          <ArticleLink
-            tag="dev"
-            title="Deploying a Gatsby app on Cloudfront"
-            date="Dec 10 2020"
-          />
-        </Link>
-        <Link to="/">
-          <ArticleLink
-            tag="dev"
-            title="Deploying a Gatsby app on Cloudfront"
-            date="Dec 10 2020"
-          />
-        </Link>
-        <Link to="/">
-          <ArticleLink
-            tag="dev"
-            title="Deploying a Gatsby app on Cloudfront"
-            date="Dec 10 2020"
-          />
-        </Link>
+      <div className="bg-gray-100 border border-gray-200 border-solid">
+        <div className="max-w-screen-lg mx-auto sm:max-w-2xl my-12 px-6">
+          <div className="flex flex-col mb-2 border-b border-gray-200 border-solid">
+            <h1 className="font-bold text-3xl mb-2">Recent Articles</h1>
+            <p className="mb-4">
+              I find it very theraputic to write things down. From helpful posts
+              getting personal tech, to random thoughts that pop in my head
+              before bed.
+            </p>
+          </div>
 
-        <button className="focus:outline-none flex flex-row items-center bg-white border border-gray-300 border-solid py-3 px-6 rounded-lg mt-4">
-          <p className="text-gray-900 font-medium text-xl">Read More</p>
-          <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-gray-900" />
-        </button>
+          {data.allMarkdownRemark.edges.map(({ node }: QueryData) => (
+            <Link to={node.fields.slug} key={node.fields.slug}>
+              <ArticleLink
+                tag="dev"
+                title={node.frontmatter.title}
+                date={node.frontmatter.date}
+              />
+            </Link>
+          ))}
+
+          <button className="focus:outline-none flex flex-row items-center bg-white border border-gray-300 border-solid py-3 px-6 rounded-lg mt-4">
+            <p className="text-gray-900 font-medium text-xl">Read More</p>
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className="ml-2 text-gray-900"
+            />
+          </button>
+        </div>
       </div>
     </Layout>
   )
