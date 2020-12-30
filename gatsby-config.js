@@ -59,6 +59,7 @@ module.exports = {
       options: {
         tailwind: true,
         whitelist: ["blockquote"],
+        ignore: ["prismjs/"],
       },
     },
   ],
