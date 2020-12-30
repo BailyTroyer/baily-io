@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import tw from "twin.macro"
 
-const NavLink = tw.h3` mx-5 text-gray-500 font-medium text-lg cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out`
+const NavLink = tw.h3`mx-5 text-gray-500 font-medium text-lg cursor-pointer hover:text-gray-900 transition duration-150 ease-in-out`
 const HamburgerNavLink = tw.a`text-white my-8 text-4xl`
 
 interface Props {
@@ -51,9 +51,15 @@ const Header: FC<Props> = (props: Props) => {
           <NavLink>About</NavLink>
           <NavLink>Projects</NavLink>
           <NavLink>Contact</NavLink>
-          <NavLink>
-            <FontAwesomeIcon icon={faGithub} size="lg" />
-          </NavLink>
+          <a
+            href="http://github.com/BailyTroyer"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <NavLink>
+              <FontAwesomeIcon icon={faGithub} size="lg" />
+            </NavLink>
+          </a>
         </div>
       </nav>
     </header>
