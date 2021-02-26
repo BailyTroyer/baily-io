@@ -27,7 +27,7 @@ const BlogPost: FC<Props> = (props: Props) => {
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
       <div className="bg-white">
-        <div className="max-w-screen-lg mx-auto sm:max-w-2xl my-12 px-6">
+        <div className="mx-auto sm:max-w-4xl max-w-screen-2xl  my-12 px-6">
           <h1 className="font-black text-4xl text-gray-900">
             {post.frontmatter.title}
           </h1>
