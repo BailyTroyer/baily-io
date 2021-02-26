@@ -1,7 +1,5 @@
 import React, { FC } from "react"
 
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
@@ -82,23 +80,23 @@ const IndexPage: FC = () => {
           </div>
           <FAQ
             question="How did you make this site?"
-            answer="Designed in figma, written in Gatsby/TS and running in Cloudfront"
+            answer="Designed in Figma, written in Gatsby/TS and running on AWS Cloudfront ☁️"
           />
           <FAQ
             question="Are you on the job market?"
-            answer="Designed in figma, written in Gatsby/TS and running in Cloudfront"
+            answer="Ça dépend. If you're a recruiter, feel free to reach out on Linkedin 💼"
           />
           <FAQ
             question="What do you do besides code?"
-            answer="Designed in figma, written in Gatsby/TS and running in Cloudfront"
+            answer="My girlfriend and I like to play this game where we drive around and roll a 3-sided dice every time we hit an intersection. 1 is left, 2 is straight and 3 is right. We've explored so many places around Buffalo!"
           />
           <FAQ
             question="Favorite food, color, website, app?"
-            answer="Designed in figma, written in Gatsby/TS and running in Cloudfront"
+            answer="I love mochi (icecream wrapped in smooth rice). My favorite color is #A78BFA (the color of these cards). Headspace is my favorite app as of 2021, for its delicate balance of simplicity along with extremly creative artwork and Facebook is my favorite website from a UI/UX perspective (only the latest 2020 redesign though)."
           />
           <FAQ
             question="Tell me a joke."
-            answer="Designed in figma, written in Gatsby/TS and running in Cloudfront"
+            answer="I would tell you a UDP joke, but you might not get it 😉"
           />
         </div>
       </div>
@@ -109,9 +107,8 @@ const IndexPage: FC = () => {
           <div className="flex flex-col mb-2 border-b border-gray-200 border-solid">
             <h1 className="font-bold text-3xl mb-2">Recent Articles</h1>
             <p className="mb-4">
-              I find it very theraputic to write things down. From helpful posts
-              getting personal tech, to random thoughts that pop in my head
-              before bed.
+              I find it very theraputic to write things down from dev blogs, to
+              shower thoughts. Read at your own peril 🙉
             </p>
           </div>
 
@@ -125,13 +122,14 @@ const IndexPage: FC = () => {
             </Link>
           ))}
 
-          <button className="focus:outline-none flex flex-row items-center bg-white border border-gray-300 border-solid py-3 px-6 rounded-lg mt-4">
+          {/* Add when I have more articles ... */}
+          {/* <button className="focus:outline-none flex flex-row items-center bg-white border border-gray-300 border-solid py-3 px-6 rounded-lg mt-4">
             <p className="text-gray-900 font-medium text-xl">Read More</p>
             <FontAwesomeIcon
               icon={faArrowRight}
               className="ml-2 text-gray-900"
             />
-          </button>
+          </button> */}
         </div>
       </div>
     </Layout>

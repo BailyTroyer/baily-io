@@ -1,30 +1,41 @@
 ---
 title: "Hello World!"
-date: "2020-12-28"
+date: "2021-01-07"
 ---
 
 # Hello World!
 
-> This is some placeholder text until I actually make a post here. 
+As the common ritual goes, always start with a simple hello world 👋
 
-### One more thing
+```go
+package main
 
-Were you under the impression that I give a nano-sized shit about your opinion? Let me clear it up for you. I have no idea what you look like, yet I know that you have a face perfectly suited for radio.
 
-I don't know where you work, yet I know that the majority of people who are your colleagues laugh at your expense behind your back.
+import "fmt"
 
-I don't know where you were educated, yet I know that the institution that matriculated you purposefully omits your name from its list of alumni.
-Maybe you post all of this nonsense because you get a kick out of it. Maybe you genuinely believe all the ridiculously narcissistic and hilariously short-sighted drivel that flows from your fingertips. Maybe you're just a soulless buffoon who has nothing to live for.
-
-In any case, you don't speak for anyone but yourself and you don't have anyone's respect.
-
-I appreciate the fervor with which you insult my intelligence. Truly, I haven't seen someone with such an inferiority complex since the kid from a broken home who bullied me in 7th grade. And for that same reason, I don't harbor any ill will towards you. But I do pity you, and like that kid who is now a manager at McDonald's, have a nice day.
-
-[copied directly from r/copypasta](https://www.reddit.com/r/copypasta/comments/dvv1uh/i_dont_know_who_you_are/)
-
-## Sample Code Snippet
-```console
-$ curl \
-https://www.reddit.com/r/copypasta/comments/dvv1uh/i_dont_know_who_you_are/.json \
-| jq -r '.[0].data | .children[0] | .data.selftext'
+func main() {
+    fmt.Println("Hello, I'm Baily!")
+}
 ```
+
+I'm Baily a Buffalo based Software Engineer just trying out a few things on the weekends. I wouldn't consier myself a blogger, a vlogger or even a devlogger but eh when in Rome. 🏛️
+
+## Who is this guy 👁️ 👄 👁️
+
+I'm currently a Software Engineer on the R&D team at [ACV Auctions](https://www.acvauctions.com/) working on Django and iOS applications to help reduce churn for our Vehicle Condition Inspectors while bringing more trust and trancparency in the used car marketplace!
+
+I used to work on an Infrastructure team where I primarily administered and developed tooling surrounding Kubernetes and Helm, however I wanted a change of pace working on more full stack development, where I hand more say in building pretty UIs.
+
+On the side I like to spend time with my lovely girlfriend going on walks, binge watching Hulu and Netflix and trying various foreign cheeses 🧀
+
+I've also started playing Battefront II on PC (I know I'm like 3 years late) but its really addicting, so if you have Origin for PC, **please please** reach out and lets play some time!
+
+## What's next ☕
+
+I've been working on a startup called [Latte](https://grabalatte.io) where we're building an iOS app to link mentors and mentees in a video/audio call environment. Being a native iOS developer at heart, it was a strange journey diving into React, JSX and CSS-type styling. However, I've started liking React Native for its ability to spin up a really slick looking UI and API handler in hours not days. Its especially powerful for POCs and hackathons where time is of the essence and tech-debt is less of an issue.
+
+Expect to see a few React Native posts in the future, from how to setup your workspace, how to configure CI/CD with Github actions and fastlane to creating a robust style system/component library that matches what you design in Figma!
+
+## One Last Thing
+
+If I don't already know you, feel free to just say hi on [Linkedin](https://www.linkedin.com/in/bailytroyer/) I promise I don't bite 😬
