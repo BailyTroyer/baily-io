@@ -83,10 +83,6 @@ const IndexPage: FC = () => {
             answer="Designed in Figma, written in Gatsby/TS and running on AWS Cloudfront ☁️"
           />
           <FAQ
-            question="Are you on the job market?"
-            answer="Ça dépend. If you're a recruiter, feel free to reach out on Linkedin 💼"
-          />
-          <FAQ
             question="What do you do besides code?"
             answer="My girlfriend and I like to play this game where we drive around and roll a 3-sided dice every time we hit an intersection. 1 is left, 2 is straight and 3 is right. We've explored so many places around Buffalo!"
           />
